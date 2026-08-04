@@ -1,20 +1,18 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import nav_carworld_logo from "../assets/carworld_nav-logo-home.png";
-import nav_lausgroup_logo from "../assets/lgc-black-logo.png";
+import nav_carworld_logo from "../../assets/carworld_nav-logo-home.png";
+import nav_lausgroup_logo from "../../assets/lgc-black-logo.png";
 
 const navLinks = [
     { label: "VEHICLES", path: "/vehicles" },
     { label: "SERVICE", path: "/service" },
     { label: "FIND A DEALER", path: "/find-dealer" },
-    { label: "ABOUT US", path: "/about" },
+    { label: "ABOUT US", path: "/about-us" },
     { label: "CONTACT US", path: "/contact" },
 ];
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const navigate = useNavigate();
 
     const handleLausGroupClick = () => {
         window.location.href = "https://lausgroup.com.ph";
@@ -27,8 +25,8 @@ export default function Header() {
 
             <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3 lg:px-6 lg:py-4">
                 {/* CarWorld Logo */}
-                <button
-                    onClick={() => navigate("/")}
+                <a
+                    href="/"
                     className="flex shrink-0 items-center bg-transparent border-none cursor-pointer"
                     aria-label="CarWorld Home"
                 >
@@ -37,18 +35,18 @@ export default function Header() {
                         alt="CarWorld Logo"
                         className="h-9 w-auto sm:h-11 lg:h-12"
                     />
-                </button>
+                </a>
 
                 {/* Desktop nav */}
                 <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
                     {navLinks.map((link) => (
-                        <button
+                        <a
                             key={link.label}
-                            onClick={() => navigate(link.path)}
+                            href={link.path}
                             className="relative text-sm font-medium tracking-wide text-white/85 transition-colors duration-200 hover:text-white after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-red-600 after:transition-all after:duration-200 hover:after:w-full bg-transparent border-none cursor-pointer"
                         >
                             {link.label}
-                        </button>
+                        </a>
                     ))}
                 </nav>
 
@@ -85,10 +83,10 @@ export default function Header() {
                 <nav className="border-t border-white/10 bg-black px-4 pb-5 pt-2 lg:hidden">
                     <div className="flex flex-col">
                         {navLinks.map((link, index) => (
-                            <button
+                            <a
                                 key={link.label}
+                                href={link.path}
                                 onClick={() => {
-                                    navigate(link.path);
                                     setMenuOpen(false);
                                 }}
                                 className="border-l-2 border-transparent py-3 pl-3 text-left text-sm font-medium tracking-wide text-white/85 transition-colors duration-300 hover:border-red-600 hover:bg-white/5 hover:text-white bg-transparent border-none cursor-pointer text-left"
@@ -99,7 +97,7 @@ export default function Header() {
                                 }}
                             >
                                 {link.label}
-                            </button>
+                            </a>
                         ))}
 
                         {/* LausGroup link for mobile */}

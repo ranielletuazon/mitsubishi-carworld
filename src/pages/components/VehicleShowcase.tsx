@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import xpander from "../assets/rn-bmc-nav-newxpander.png";
-import triton from "../assets/Triton-Side.png";
-import versavan from "../assets/versa-van.png";
-import l300 from "../assets/W50_L300.png";
-import montero from "../assets/W85_Pajero.png";
-import outlander from "../assets/X3N-0-GT-WhitePearl-Side.webp";
-import xforce from "../assets/xforce-Side.png";
-import mirageG4 from "../assets/new-mirage-g4-P19_MirageG4.png";
+import xpander from "../../assets/rn-bmc-nav-newxpander.png";
+import triton from "../../assets/Triton-Side.png";
+import versavan from "../../assets/versa-van.png";
+import l300 from "../../assets/W50_L300.png";
+import montero from "../../assets/W85_Pajero.png";
+import outlander from "../../assets/X3N-0-GT-WhitePearl-Side.webp";
+import xforce from "../../assets/xforce-Side.png";
+import mirageG4 from "../../assets/new-mirage-g4-P19_MirageG4.png";
 
 type Category = "all" | "suv" | "pickup" | "sedan" | "van";
 
@@ -190,57 +190,62 @@ export default function VehicleShowcase({
 
     return (
         <>
-            <section className="w-full py-10 bg-white">
-                {/* Header */}
-                <div className="container mx-auto px-4 lg:px-6">
-                    <h2 className="text-3xl font-black text-gray-900 text-center uppercase tracking-tight mb-2">
-                        {title}
-                    </h2>
-                    {/* <p className="text-sm text-gray-500 text-center mb-8">
+            <section className="w-full bg-white mt-24">
+                {/* Container Wrap*/}
+                <div className="container mx-auto flex flex-col">
+                    {/* Header */}
+                    <div className="px-4 lg:px-6 container mx-auto">
+                        <h2 className="text-3xl font-black text-gray-900 text-center uppercase tracking-tight mb-2">
+                            {title}
+                        </h2>
+                        {/* <p className="text-sm text-gray-500 text-center mb-8">
                         {subtitle}
                     </p> */}
 
-                    {/* Filters */}
-                    <div className="flex flex-wrap justify-center gap-2 mb-10">
-                        {filters.map((f) => (
-                            <button
-                                key={f.value}
-                                onClick={() => setActiveFilter(f.value)}
-                                className={`text-xs font-medium tracking-wider uppercase px-4 py-2 border transition-all duration-200
+                        {/* Filters */}
+                        <div className="flex flex-wrap justify-center gap-2 mb-10">
+                            {filters.map((f) => (
+                                <button
+                                    key={f.value}
+                                    onClick={() => setActiveFilter(f.value)}
+                                    className={`text-xs font-medium tracking-wider uppercase px-4 py-2 border transition-all duration-200
                                 ${
                                     activeFilter === f.value
                                         ? "bg-red-600 border-red-600 text-white"
                                         : "bg-transparent border-gray-300 text-gray-500 hover:border-red-600 hover:text-red-600"
                                 }`}
-                            >
-                                {f.label}
-                            </button>
-                        ))}
+                                >
+                                    {f.label}
+                                </button>
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                {/* Grid */}
-                <div className="container mx-auto border-t border-l border-gray-200">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                        {filtered.map((vehicle) => (
-                            <div
-                                key={vehicle.slug}
-                                className="border-b border-r border-gray-200"
-                            >
-                                <VehicleCard
-                                    vehicle={vehicle}
-                                    onClick={() =>
-                                        navigate(`/vehicles/${vehicle.slug}`)
-                                    }
-                                />
-                            </div>
-                        ))}
+                    {/* Grid */}
+                    <div className="border-t border-l border-gray-200">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                            {filtered.map((vehicle) => (
+                                <div
+                                    key={vehicle.slug}
+                                    className="border-b border-r border-gray-200"
+                                >
+                                    <VehicleCard
+                                        vehicle={vehicle}
+                                        onClick={() =>
+                                            navigate(
+                                                `/vehicles/${vehicle.slug}`,
+                                            )
+                                        }
+                                    />
+                                </div>
+                            ))}
 
-                        {filtered.length === 0 && (
-                            <div className="col-span-full py-16 text-center text-gray-400 text-sm">
-                                No models found in this category.
-                            </div>
-                        )}
+                            {filtered.length === 0 && (
+                                <div className="col-span-full py-16 text-center text-gray-400 text-sm">
+                                    No models found in this category.
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </section>
