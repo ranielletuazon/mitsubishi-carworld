@@ -161,7 +161,7 @@ function VehicleCard({ vehicle, onClick }: VehicleCardProps) {
 
                 {/* CTA */}
                 <div className="flex items-center gap-1 text-xs font-medium text-red-600 uppercase tracking-wider mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    <span>View Details</span>
+                    <span>View More</span>
                     <span className="transition-transform duration-200 group-hover:translate-x-1">
                         →
                     </span>

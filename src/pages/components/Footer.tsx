@@ -147,17 +147,17 @@ export default function Footer() {
                         © 2026 Mitsubishi Carworld, Inc. All rights reserved.
                     </span>
                     <span className="text-[11px] text-white/40">
-                        A member of the{" "}
                         <button
                             onClick={() =>
-                                (window.location.href =
-                                    "https://lausgroup.com.ph")
+                                window.open(
+                                    "https://lausgroup.com.ph",
+                                    "_blank",
+                                )
                             }
                             className="text-white/70 font-bold bg-transparent border-none cursor-pointer hover:text-red-500 transition-colors duration-200 p-0"
                         >
-                            Laus Group
+                            Laus Group of Companies
                         </button>{" "}
-                        of Companies
                     </span>
                 </div>
             </div>
