@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-
+// Image
+import carworld from "../../assets/images/carworld_nav-logo-home.png";
 interface FooterLink {
     label: string;
     path: string;
@@ -87,12 +88,15 @@ export default function Footer() {
                 {/* Brand column */}
                 <div className="col-span-2 md:col-span-1">
                     <div className="text-lg font-black uppercase tracking-wide">
-                        CAR<span className="text-red-600">WORLD</span>
+                        <img
+                            src={carworld}
+                            alt="Carworld Logo"
+                            className="w-40 h-auto"
+                        />
                     </div>
                     <p className="text-xs text-white/50 leading-relaxed mt-3.5 max-w-[260px]">
-                        The Home of Mitsubishi in the Philippines. Genuine
-                        vehicles, trusted service, and a nationwide dealer
-                        network built on 45 years of driving excellence.
+                        Genuine vehicles, trusted service, and a nationwide
+                        dealer network built on 45 years of driving excellence.
                     </p>
                     <div className="flex gap-2.5 mt-5">
                         <a

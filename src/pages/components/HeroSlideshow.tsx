@@ -3,10 +3,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // ── Swap these for your real imports ──────────────────────────────────────
 // import montero from "../assets/slides/montero.jpg";
-import promo from "../../assets/promo-buy-n-win.jpg";
-import xpander from "../../assets/xpander.jpg";
-import strada from "../../assets/strada-black.jpg";
-import cw_banner from "../../assets/CW_Banner.jpg";
+import promo from "../../assets/images/promo-buy-n-win.jpg";
+import xpander from "../../assets/images/xpander.jpg";
+import strada from "../../assets/images/strada-black.jpg";
+import cw_banner from "../../assets/images/CW_Banner.jpg";
 
 const SLIDE_DURATION = 5000; // ms per slide
 
