@@ -1,14 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import xpander from "../../assets/rn-bmc-nav-newxpander.png";
-import triton from "../../assets/Triton-Side.png";
-import versavan from "../../assets/versa-van.png";
-import l300 from "../../assets/W50_L300.png";
-import montero from "../../assets/W85_Pajero.png";
-import outlander from "../../assets/X3N-0-GT-WhitePearl-Side.webp";
-import xforce from "../../assets/xforce-Side.png";
-import mirageG4 from "../../assets/new-mirage-g4-P19_MirageG4.png";
+import xpander from "../../assets/images/xpander.png";
+import triton from "../../assets/images/triton.png";
+import versavan from "../../assets/images/versa-van.png";
+import l300 from "../../assets/images/l300.png";
+import montero from "../../assets/images/montero.png";
+import xforce from "../../assets/images/xforce.png";
+import mirageG4 from "../../assets/images/mirage.png";
 
 type Category = "all" | "suv" | "pickup" | "sedan" | "van";
 
@@ -69,14 +68,6 @@ const vehicles: Vehicle[] = [
         category: "suv",
         image: montero,
         slug: "montero-sport",
-    },
-    {
-        name: "DESTINATOR",
-        variant: "GT 2.4 MIVEC CVT · 7-seater",
-        price: "₱1,389,000",
-        category: "suv",
-        image: outlander,
-        slug: "outlander",
     },
     {
         name: "XFORCE",

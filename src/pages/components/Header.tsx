@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import nav_carworld_logo from "../../assets/carworld_nav-logo-home.png";
-import nav_lausgroup_logo from "../../assets/lgc-black-logo.png";
+import nav_carworld_logo from "../../assets/images/carworld_nav-logo-home.png";
+import nav_lausgroup_logo from "../../assets/images/lgc-black-logo.png";
 
 const navLinks = [
     { label: "VEHICLES", path: "/vehicles" },
-    { label: "SERVICE", path: "/service" },
+    { label: "SERVICES", path: "/services" },
     { label: "FIND A DEALER", path: "/find-dealer" },
     { label: "ABOUT US", path: "/about-us" },
     { label: "CONTACT US", path: "/contact" },
@@ -15,7 +15,7 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleLausGroupClick = () => {
-        window.location.href = "https://lausgroup.com.ph";
+        window.open("https://lausgroup.com.ph", "_blank");
     };
 
     return (
@@ -54,7 +54,9 @@ export default function Header() {
                 <div className="flex items-center gap-3">
                     {/* LausGroup logo clickable button */}
                     <button
-                        onClick={handleLausGroupClick}
+                        onClick={() =>
+                            window.open("https://lausgroup.com.ph", "_blank")
+                        }
                         className="hidden bg-white px-3 py-2 shadow-sm lg:flex border-2 border-red-600 items-center bg-transparent border-2 border-red-600 transition-opacity hover:opacity-80 cursor-pointer"
                         aria-label="Visit LausGroup website"
                     >
