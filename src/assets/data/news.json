@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "slug": "reign-over-the-rain",
+        "category": "Promo",
+        "title": "Reign Over the Rain",
+        "image": "reign.jpg",
+        "description": "Don't let the season stop you. Special financing and accessories deals available on select all-wheel drive models this July.",
+        "status": "published",
+        "published_date": "2026-07-01",
+        "created_date": "2026-06-20"
+    },
+    {
+        "id": 2,
+        "slug": "june-deals-in-overdrive",
+        "category": "Event",
+        "title": "June Deals in Overdrive",
+        "image": "junedeals.jpg",
+        "description": "Purchase any Mitsubishi vehicle and get a chance to win a brand-new Xpander 1.5 GLX AT and other amazing prizes.",
+        "status": "published",
+        "published_date": "2026-06-01",
+        "created_date": "2026-05-18"
+    },
+    {
+        "id": 3,
+        "slug": "amayzing-drive-deals",
+        "category": "New Model",
+        "title": "aMAYzing Drive Deals",
+        "image": "amayzing.jpg",
+        "description": "The boldest Triton yet hits Carworld showrooms. Enhanced off-road capability and premium cabin finishes, ready to explore.",
+        "status": "published",
+        "published_date": "2026-05-01",
+        "created_date": "2026-04-22"
+    },
+    {
+        "id": 4,
+        "slug": "refresh-your-drive",
+        "category": "Announcement",
+        "title": "Refresh Your Drive",
+        "image": "refresh.jpg",
+        "description": "Four decades of trust, service, and driving excellence in the Philippines. Thank you to every customer who's been part of our journey.",
+        "status": "published",
+        "published_date": "2026-04-01",
+        "created_date": "2026-03-15"
+    }
+]

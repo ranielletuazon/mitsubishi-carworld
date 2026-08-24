@@ -15,7 +15,7 @@ interface Vehicle {
     excerpt: string;
 }
 
-const API_URL = "http://localhost/carworld_api/get_vehicles.php";
+const API_URL = "https://mitsubishicarworld.com.ph/api/get_vehicles.php";
 // TODO before deploy: this must become an env var
 // (e.g. import.meta.env.VITE_API_URL) — localhost will not resolve in production.
 
