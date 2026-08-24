@@ -36,7 +36,7 @@ const footerColumns: FooterColumn[] = [
     {
         title: "Service",
         links: [
-            { label: "Book a Service", path: "/service/book" },
+            { label: "Book a Service", path: "/contact-us" },
             { label: "Service Promos", path: "/service/promos" },
         ],
     },
@@ -44,7 +44,7 @@ const footerColumns: FooterColumn[] = [
         title: "Company",
         links: [
             { label: "About Us", path: "/about" },
-            { label: "Find a Dealer", path: "/find-dealer" },
+            { label: "Find a Dealer", path: "/find-a-dealer" },
             { label: "Careers", path: "/careers" },
             { label: "Data Privacy Notice", path: "/privacy" },
         ],
