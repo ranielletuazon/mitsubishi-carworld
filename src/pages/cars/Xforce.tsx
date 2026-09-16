@@ -130,7 +130,7 @@ function FeatureSection({
 const xforceVariants: Variant[] = [
     {
         name: "GT 1.5G 2WD CVT",
-        price: 1581000,
+        price: 1119000,
         image: `${IMG_BASE}/variants/gt2wdcvt.png`,
         imageAlt: "Mitsubishi Xforce GLX MT",
         specs: ["1.5L Unleaded", "CVT", "D4 MPI VVT"],
@@ -148,7 +148,7 @@ const xforceVariants: Variant[] = [
     },
     {
         name: "GLS 1.5G 2WD CVT",
-        price: 1367000,
+        price: 1611000,
         image: `${IMG_BASE}/variants/gls2wdcvt.png`,
         imageAlt: "Mitsubishi Xforce GLX MT",
         specs: ["1.5L Unleaded", "CVT", "D4 MPI VVT"],
@@ -195,7 +195,7 @@ export default function Xforce() {
                             Bigger, Tougher, and Stronger.
                         </h1>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱1,367,000
+                            From ₱1,119,000
                         </p>
                         <a
                             href="/contact-us"

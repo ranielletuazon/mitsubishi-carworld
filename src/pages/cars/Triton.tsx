@@ -127,7 +127,7 @@ function FeatureSection({
 const tritonVariants: Variant[] = [
     {
         name: "Athlete 4WD AT",
-        price: 1909000,
+        price: 2359000,
         image: `${IMG_BASE}/variants/athlete4wd.jpg`,
         imageAlt: "Mitsubishi Triton Athlete AT",
         specs: [
@@ -154,7 +154,7 @@ const tritonVariants: Variant[] = [
     },
     {
         name: "GLS 2WD AT",
-        price: 1582000,
+        price: 1999000,
         image: `${IMG_BASE}/variants/gls2wdat.jpg`,
         imageAlt: "Mitsubishi Triton GLS 2WD A/T",
         specs: [
@@ -200,7 +200,7 @@ const tritonVariants: Variant[] = [
     },
     {
         name: "GLX 2WD AT",
-        price: 1383000,
+        price: 1735000,
         image: `${IMG_BASE}/variants/glx2wdat.jpg`,
         imageAlt: "Mitsubishi Triton GLX 2WD M/T",
         specs: [
@@ -222,7 +222,7 @@ const tritonVariants: Variant[] = [
     },
     {
         name: "GLX 2WD MT",
-        price: 1311000,
+        price: 1649000,
         image: `${IMG_BASE}/variants/glx2wdat.jpg`,
         imageAlt: "Mitsubishi Triton GLX 2WD M/T",
         specs: [
@@ -244,7 +244,7 @@ const tritonVariants: Variant[] = [
     },
     {
         name: "GL 4WD MT",
-        price: 1157000,
+        price: 1292000,
         image: `${IMG_BASE}/variants/gl4wdmt.jpg`,
         imageAlt: "Mitsubishi Triton GL 4WD M/T",
         specs: [
@@ -267,7 +267,7 @@ const tritonVariants: Variant[] = [
     },
     {
         name: "GL 2WD MT",
-        price: 1134000,
+        price: 1266000,
         image: `${IMG_BASE}/variants/gl4wdmt.jpg`,
         imageAlt: "Mitsubishi Triton GL 2WD M/T",
         specs: [
@@ -338,7 +338,7 @@ export default function Triton() {
                             Bigger, Tougher, and Stronger
                         </p>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱1,134,000
+                            From ₱1,266,000
                         </p>
                         <a
                             href="/contact-us"

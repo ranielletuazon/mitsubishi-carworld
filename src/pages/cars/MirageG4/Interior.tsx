@@ -2,11 +2,37 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const IMG_BASE = "/cars/mirage-g4/images";
 
+const interiorFeatures = [
+    {
+        label: "Driver-Centric Dashboard (GLS)",
+        image: `${IMG_BASE}/interior12.jpg`,
+        imageAlt: "Mirage G4 driver-centric dashboard layout",
+    },
+    {
+        label: "Fabric Seats",
+        image: `${IMG_BASE}/interior13.jpg`,
+        imageAlt: "Mirage G4 fabric seat upholstery",
+    },
+    {
+        label: "6-Way Adjustable Seats",
+        image: `${IMG_BASE}/interior14.jpg`,
+        imageAlt: "Mirage G4 6-way adjustable driver seat",
+    },
+    {
+        label: "Automatic Climate Control (GLS)",
+        image: `${IMG_BASE}/interior15.jpg`,
+        imageAlt: "Mirage G4 automatic climate control panel",
+    },
+];
+
 export default function MirageG4Interior() {
     const navigate = useNavigate();
+    const [activeIndex, setActiveIndex] = useState(0);
+    const activeFeature = interiorFeatures[activeIndex];
     return (
         <>
             <Header />
@@ -46,6 +72,41 @@ export default function MirageG4Interior() {
                                     design for a comfortable ride where nothing
                                     gets left behind.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Interior Feature Selector */}
+                <section className="w-full bg-white py-14 sm:py-20">
+                    <div className="container mx-auto px-4 lg:px-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                            {/* Image display */}
+                            <div className="relative aspect-[4/3] sm:aspect-[16/10] bg-gray-100 overflow-hidden lg:order-2">
+                                <img
+                                    key={activeFeature.image}
+                                    src={activeFeature.image}
+                                    alt={activeFeature.imageAlt}
+                                    loading="lazy"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+
+                            {/* Selection list */}
+                            <div className="flex flex-col gap-1 lg:order-1">
+                                {interiorFeatures.map((feature, i) => (
+                                    <button
+                                        key={feature.label}
+                                        onClick={() => setActiveIndex(i)}
+                                        className={`text-left px-5 py-4 text-sm font-bold uppercase tracking-wide border-l-2 transition-all duration-200 cursor-pointer ${
+                                            activeIndex === i
+                                                ? "border-red-600 bg-gray-50 text-gray-900"
+                                                : "border-transparent text-gray-500 hover:border-gray-300 hover:bg-gray-50"
+                                        }`}
+                                    >
+                                        {feature.label}
+                                    </button>
+                                ))}
                             </div>
                         </div>
                     </div>

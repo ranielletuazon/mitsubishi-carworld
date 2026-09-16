@@ -21,6 +21,8 @@ import L300 from "./pages/cars/L300";
 import Xforce from "./pages/cars/Xforce";
 import Destinator from "./pages/cars/Destinator";
 import Versa from "./pages/cars/Versa";
+import Strada from "./pages/cars/Strada";
+import Outlander from "./pages/cars/Outlander";
 import MirageG4Exterior from "./pages/cars/MirageG4/Exterior";
 import MirageG4Interior from "./pages/cars/MirageG4/Interior";
 import MirageG4Drive from "./pages/cars/MirageG4/Drive";
@@ -46,6 +48,10 @@ import XforceExterior from "./pages/cars/Xforce/Exterior";
 import XforceInterior from "./pages/cars/Xforce/Interior";
 import XforceSafety from "./pages/cars/Xforce/Safety";
 import VersaDrive from "./pages/cars/Versa/Drive";
+import NewsView from "./pages/NewsView";
+import PriceList from "./pages/PriceList";
+import DataPrivacy from "./pages/DataPrivacy";
+import Brochure from "./pages/Brochure";
 
 function App() {
     return (
@@ -192,6 +198,15 @@ function App() {
                         element={<VersaDrive />}
                     ></Route>
 
+                    {/* Strada */}
+                    <Route path="/vehicles/strada" element={<Strada />}></Route>
+
+                    {/* Outlander */}
+                    <Route
+                        path="/vehicles/outlander"
+                        element={<Outlander />}
+                    ></Route>
+
                     <Route path="/about-us" element={<About />}></Route>
                     <Route path="/services" element={<Service />}></Route>
                     <Route
@@ -209,6 +224,13 @@ function App() {
                         path="/service-promos"
                         element={<ServicePromos />}
                     ></Route>
+                    <Route path="/news/:slug" element={<NewsView />} />
+                    <Route path="/price-list" element={<PriceList />}></Route>
+                    <Route
+                        path="/data-privacy-notice"
+                        element={<DataPrivacy />}
+                    ></Route>
+                    <Route path="/brochures" element={<Brochure />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </BrowserRouter>

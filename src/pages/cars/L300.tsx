@@ -119,7 +119,7 @@ function FeatureSection({
 const monteroVariants: Variant[] = [
     {
         name: "CAB & CHASSIS",
-        price: 813000,
+        price: 825000,
         image: `${IMG_BASE}/variants/cab.png`,
         imageAlt: "Mitsubishi Montero Sport GT 4WD AT",
         specs: [
@@ -172,7 +172,7 @@ export default function L300() {
                             trusted and reliable partner your business needs.
                         </p>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱813,000
+                            From ₱825,000
                         </p>
                         <a
                             href="/contact-us"
@@ -236,7 +236,7 @@ export default function L300() {
 
                 <VariantSelector
                     variants={monteroVariants}
-                    brochureHref="/brochures/montero-sport-brochure.pdf"
+                    brochureHref="/brochures/files/l300.pdf"
                 />
 
                 <Footer />
