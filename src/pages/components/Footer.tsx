@@ -28,7 +28,7 @@ const footerColumns: FooterColumn[] = [
     {
         title: "Sales",
         links: [
-            { label: "Promotions", path: "/promotions" },
+            { label: "Promotions", path: "/news" },
             { label: "Price List", path: "/price-list" },
             { label: "Brochures", path: "/brochures" },
         ],
@@ -37,7 +37,7 @@ const footerColumns: FooterColumn[] = [
         title: "Service",
         links: [
             { label: "Book a Service", path: "/contact-us" },
-            { label: "Service Promos", path: "/service/promos" },
+            { label: "Service Promos", path: "/service-promos" },
         ],
     },
     {
@@ -50,34 +50,34 @@ const footerColumns: FooterColumn[] = [
                 path: "https://careers.lausgroup.com.ph",
                 external: true,
             },
-            { label: "Data Privacy Notice", path: "/privacy" },
+            { label: "Data Privacy Notice", path: "/data-privacy-notice" },
         ],
     },
 ];
 
-function FacebookIcon() {
-    return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.91h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94z" />
-        </svg>
-    );
-}
+// function FacebookIcon() {
+//     return (
+//         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.91h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94z" />
+//         </svg>
+//     );
+// }
 
-function InstagramIcon() {
-    return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.65.25 1.2.6 1.75 1.15.55.55.9 1.1 1.15 1.75.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.75 4.9 4.9 0 01-1.75 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.75-1.15 4.9 4.9 0 01-1.15-1.75c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.25-.65.6-1.2 1.15-1.75A4.9 4.9 0 015.43 2.55c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z" />
-        </svg>
-    );
-}
+// function InstagramIcon() {
+//     return (
+//         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.65.25 1.2.6 1.75 1.15.55.55.9 1.1 1.15 1.75.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.75 4.9 4.9 0 01-1.75 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.75-1.15 4.9 4.9 0 01-1.15-1.75c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.25-.65.6-1.2 1.15-1.75A4.9 4.9 0 015.43 2.55c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.25a3.25 3.25 0 110-6.5 3.25 3.25 0 010 6.5zm5.2-8.45a1.17 1.17 0 100-2.34 1.17 1.17 0 000 2.34z" />
+//         </svg>
+//     );
+// }
 
-function YoutubeIcon() {
-    return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.87.55 9.38.55 9.38.55s7.51 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81zM9.6 15.5v-7l6.26 3.5-6.26 3.5z" />
-        </svg>
-    );
-}
+// function YoutubeIcon() {
+//     return (
+//         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.87.55 9.38.55 9.38.55s7.51 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81zM9.6 15.5v-7l6.26 3.5-6.26 3.5z" />
+//         </svg>
+//     );
+// }
 
 export default function Footer() {
     return (
@@ -100,7 +100,7 @@ export default function Footer() {
                         Genuine vehicles, trusted service, and a nationwide
                         dealer network built on 45 years of driving excellence.
                     </p>
-                    <div className="flex gap-2.5 mt-5">
+                    {/* <div className="flex gap-2.5 mt-5">
                         <a
                             href="#"
                             aria-label="Facebook"
@@ -122,7 +122,7 @@ export default function Footer() {
                         >
                             <YoutubeIcon />
                         </a>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Link columns */}

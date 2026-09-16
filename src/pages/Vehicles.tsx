@@ -75,10 +75,11 @@ export default function Vehicles() {
             });
     }, []);
 
-    const filtered =
+    const filtered = (
         activeFilter === "all"
             ? vehicles
-            : vehicles.filter((v) => v.category === activeFilter);
+            : vehicles.filter((v) => v.category === activeFilter)
+    ).sort((a, b) => a.price - b.price);
 
     return (
         <main className="w-full max-w-full bg-[#0B0B0C]">

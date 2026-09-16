@@ -14,7 +14,7 @@ interface Slide {
     eyebrow: string;
     title: string[]; // split into lines
     subtitle: string;
-    primaryCta: { label: string; href: string };
+    primaryCta?: { label: string; href: string };
     secondaryCta?: { label: string; href: string };
     bgImage: string; // swap in real image paths
     bgColor: string; // fallback while image loads
@@ -26,7 +26,7 @@ const slides: Slide[] = [
         title: ["BUY AND WIN", "Ultimate Giveaway"],
         subtitle:
             "Get a chance to win a Brand New Mitsubishi Xpander 1.5 GLX AT and other amazing prizes when you purchase a car from any Mitsubishi Carworld dealership from February 1, 2026 to July 31, 2026. Grand Raffle Draw is on August 17, 2026.",
-        primaryCta: { label: "Explore", href: "/vehicles" },
+        primaryCta: { label: "Explore", href: "/news/amayzing-drive-deals" },
         secondaryCta: { label: "Talk to a Dealer", href: "/find-dealer" },
         bgImage: promo,
         bgColor:
@@ -48,7 +48,7 @@ const slides: Slide[] = [
         title: ["STRADA", "BLACK SERIES"],
         subtitle:
             "Space, style, and efficiency in one package. The Xpander is the Philippines' most loved MPV — now with enhanced safety features.",
-        primaryCta: { label: "Explore", href: "/vehicles/xpander" },
+        primaryCta: { label: "Explore", href: "/vehicles/strada" },
         secondaryCta: { label: "Book a Test Drive", href: "/contact" },
         bgImage: strada,
         bgColor:
@@ -58,7 +58,7 @@ const slides: Slide[] = [
         eyebrow: "45 Years Anniversary",
         title: ["Mitsubishi Carworld", ""],
         subtitle: "",
-        primaryCta: { label: "Explore", href: "/vehicles/strada" },
+        // primaryCta: { label: "Explore", href: "#" },
         // secondaryCta: { label: "Find a Dealer", href: "/find-dealer" },
         bgImage: cw_banner,
         bgColor:
@@ -253,12 +253,14 @@ export default function HeroSlideshow() {
                                 transitionDelay: "680ms",
                             }}
                         >
-                            <a
-                                href={slide.primaryCta.href}
-                                className="bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-widest px-7 py-3 transition-colors duration-200"
-                            >
-                                {slide.primaryCta.label}
-                            </a>
+                            {slide.primaryCta && (
+                                <a
+                                    href={slide.primaryCta.href}
+                                    className="bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-widest px-7 py-3 transition-colors duration-200"
+                                >
+                                    {slide.primaryCta.label}
+                                </a>
+                            )}
                             {slide.secondaryCta && (
                                 <a
                                     href={slide.secondaryCta.href}

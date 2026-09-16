@@ -13,6 +13,8 @@ interface Vehicle {
 const API_URL = "http://localhost/carworld_api/get_vehicles.php";
 // TODO before deploy: move to an env var (import.meta.env.VITE_API_URL)
 
+const featuredSlugs = ["mirage-g4", "xpander", "montero-sport", "l300"];
+
 const vehicleImages = import.meta.glob("../../assets/images/*.png", {
     eager: true,
     import: "default",
@@ -47,7 +49,6 @@ function VehicleCardSkeleton() {
 
 export default function VehicleShowcase({
     title = "Explore the Line Up",
-    limit = 4,
 }: VehicleShowcaseProps) {
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
 
@@ -58,12 +59,15 @@ export default function VehicleShowcase({
                 return res.json();
             })
             .then((data: Vehicle[]) => {
-                setVehicles(data.slice(0, limit));
+                const featured = featuredSlugs
+                    .map((slug) => data.find((v) => v.slug === slug))
+                    .filter((v): v is Vehicle => v !== undefined);
+                setVehicles(featured);
             })
             .catch(() => {
                 setVehicles([]);
             });
-    }, [limit]);
+    }, []);
 
     const showSkeleton = vehicles.length === 0;
 
@@ -82,9 +86,11 @@ export default function VehicleShowcase({
 
                 {showSkeleton ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        {Array.from({ length: limit }).map((_, i) => (
-                            <VehicleCardSkeleton key={i} />
-                        ))}
+                        {Array.from({ length: featuredSlugs.length }).map(
+                            (_, i) => (
+                                <VehicleCardSkeleton key={i} />
+                            ),
+                        )}
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

@@ -8,7 +8,7 @@ const VIDEO_BASE = "/cars/mirage-g4/videos";
 const mirageVariants: Variant[] = [
     {
         name: "GLX MT",
-        price: 711000,
+        price: 769000,
         image: "/cars/mirage-g4/images/variants/mirage-glx-mt.png",
         imageAlt: "Mitsubishi Mirage G4 GLX MT",
         specs: [
@@ -25,7 +25,7 @@ const mirageVariants: Variant[] = [
     },
     {
         name: "GLX CVT",
-        price: 819000,
+        price: 841000,
         image: "/cars/mirage-g4/images/variants/mirage-glx.png",
         imageAlt: "Mitsubishi Mirage G4 GLX CVT",
         specs: ["1.2L Gasoline", "2WD", "CVT", "1.2L 3-cylinder DOHC MIVEC"],
@@ -37,7 +37,7 @@ const mirageVariants: Variant[] = [
     },
     {
         name: "GLS CVT",
-        price: 899000,
+        price: 937000,
         image: "/cars/mirage-g4/images/variants/mirage-glx-cvt.png",
         imageAlt: "Mitsubishi Mirage G4 GLS CVT",
         specs: ["1.2L Gasoline", "2WD", "CVT", "1.2L 3-cylinder DOHC MIVEC"],
@@ -312,7 +312,7 @@ export default function MirageG4() {
                             Sensational style. Exceptional practicality.
                         </p>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱768,000
+                            From ₱769,000
                         </p>
                         <a
                             href="/contact-us"
@@ -383,7 +383,7 @@ export default function MirageG4() {
                 {/* Section */}
                 <VariantSelector
                     variants={mirageVariants}
-                    brochureHref="/brochures/mirage-g4-brochure.pdf"
+                    brochureHref="/brochures/files/mirage-g4.pdf"
                 />
 
                 <Footer />

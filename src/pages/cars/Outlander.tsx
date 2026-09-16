@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VariantSelector, { type Variant } from "../components/VariantSelector";
 
-const IMG_BASE = "/cars/destinator/images";
+const IMG_BASE = "/cars/outlander/images";
 
 function DiamondBullet({ className = "" }: { className?: string }) {
     return (
@@ -14,11 +14,11 @@ function DiamondBullet({ className = "" }: { className?: string }) {
 
 type FeatureSectionProps = {
     index: string;
-    eyebrow?: string;
+    eyebrow: string;
     heading: string;
     copy: string;
     ctaLabel?: string;
-    ctaHref?: string;
+    ctaHref: string;
     image: string;
     imageAlt: string;
     objectPosition?: "object-center" | "object-left" | "object-right";
@@ -27,7 +27,6 @@ type FeatureSectionProps = {
 };
 
 function FeatureSection({
-    index,
     eyebrow,
     heading,
     copy,
@@ -65,32 +64,21 @@ function FeatureSection({
                         imageOnLeft ? "lg:order-2" : "lg:order-1"
                     }`}
                 >
-                    <span
-                        aria-hidden="true"
-                        className={`absolute top-8 left-6 sm:left-10 lg:left-16 text-[11px] font-bold tracking-widest ${
-                            isDark ? "text-white/15" : "text-gray-200"
-                        }`}
-                    >
-                        {index}
-                    </span>
-
                     <div className="max-w-md">
-                        {eyebrow && (
-                            <div className="flex items-center gap-2 mb-3">
-                                <DiamondBullet
-                                    className={
-                                        isDark ? "text-red-500" : "text-red-600"
-                                    }
-                                />
-                                <p
-                                    className={`text-[11px] font-bold tracking-[3px] uppercase ${
-                                        isDark ? "text-red-500" : "text-red-600"
-                                    }`}
-                                >
-                                    {eyebrow}
-                                </p>
-                            </div>
-                        )}
+                        <div className="flex items-center gap-2 mb-3">
+                            <DiamondBullet
+                                className={
+                                    isDark ? "text-red-500" : "text-red-600"
+                                }
+                            />
+                            <p
+                                className={`text-[11px] font-bold tracking-[3px] uppercase ${
+                                    isDark ? "text-red-500" : "text-red-600"
+                                }`}
+                            >
+                                {eyebrow}
+                            </p>
+                        </div>
 
                         <h2
                             className={`text-2xl sm:text-3xl lg:text-[2.25rem] font-black uppercase tracking-tight leading-none mb-5 ${
@@ -127,49 +115,27 @@ function FeatureSection({
     );
 }
 
-const destinatorVariants: Variant[] = [
+const outlanderVariants: Variant[] = [
     {
-        name: "GT",
-        price: 1929000,
-        image: `${IMG_BASE}/variants/gt.webp`,
-        imageAlt: "Mitsubishi Destinator GT",
-        specs: ["1.5L Unleaded", "2WD Automatic", "CVT", "D4 MPI/DI I/C T/C"],
-        keyFeatures: [
-            "1.5-Liter Turbocharged 4 In-Line Gasoline (4B40) Euro-4",
-            "FCM (Forward Collision Mitigation)",
-            "Synthetic Leather Seats (Heat Guard) in Two-Tone Black/Maroon",
-            "Panoramic Sunroof With Tilt and Slide: Power Sunshade",
+        name: "4WD Plug-In Hybrid",
+        price: 2998000,
+        image: `${IMG_BASE}/variants/outlander4wd.png`,
+        imageAlt: "Mitsubishi Outlander 4WD",
+        specs: [
+            "2.4L Gasoline",
+            "4WD",
+            "2.4L 16-Valve Inline 4-Cylinder DOHC MIVEC ECI-Multi",
         ],
-    },
-    {
-        name: "GLS",
-        price: 1599000,
-        image: `${IMG_BASE}/variants/gls.webp`,
-        imageAlt: "Mitsubishi Destinator GLS",
-        specs: ["1.5L Unleaded", "2WD Automatic", "CVT", "D4 MPI/DI I/C T/C"],
         keyFeatures: [
-            "Engine Push Start System",
-            "Active Yaw Control",
-            "Integrated in 8″ LCD Meter Multi-Information Display Monitor",
-            "LED-type daytime running light",
-        ],
-    },
-    {
-        name: "GLX",
-        price: 1389000,
-        image: `${IMG_BASE}/variants/glx.webp`,
-        imageAlt: "Mitsubishi Destinator GLX",
-        specs: ["1.5L Unleaded", "2WD Automatic", "CVT", "D4 MPI/DI I/C T/C"],
-        keyFeatures: [
-            "1.5-Liter Turbocharged 4 In-Line Gasoline (4B40) Euro-4",
-            "8″ Smart Phone Link Display Audio (SDA) Touchscreen with Apple CarPlay and Android Auto, Bluetooth, Tuner and USB ports",
-            "Active Stability Control with TCL",
-            "LED-type Headlamp",
+            "INVECS III CVT (Continuously Variable Transmission)",
+            "Anti-Lock Brake System (ABS) with Electronic Brake-Force Distribution (EBD)",
+            "Power Side Mirrors with Integrated LED-Type Turn Signals",
+            "Remote Trunk Opener",
         ],
     },
 ];
 
-export default function Destinator() {
+export default function Outlander() {
     return (
         <>
             <style>{`
@@ -185,27 +151,27 @@ export default function Destinator() {
                 {/* Hero */}
                 <section className="relative w-full h-[70vh] min-h-[480px] overflow-hidden bg-black">
                     <img
-                        src={`${IMG_BASE}/destinator-poster.webp`}
-                        alt="Mitsubishi Destinator"
+                        src={`${IMG_BASE}/outlander-poster.jpg`}
+                        alt="Mitsubishi Montero Sport"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/45" />
 
                     <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
                         <img
-                            src={`${IMG_BASE}/destinator-logo.png`}
-                            alt="Mitsubishi Destinator"
-                            className="h-8 sm:h-12 w-auto mb-4"
+                            src={`${IMG_BASE}/outlander-logo.png`}
+                            alt="Mitsubishi Montero Sport"
+                            className="h-4 sm:h-14 w-auto mb-4"
                         />
                         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-none mb-3">
-                            Destined for more
+                            A driving experience like no other
                         </h1>
                         <p className="text-sm sm:text-base text-white/90 mb-1">
-                            7-Seater SUV | 1.5L Turbo Engine | 5 Drive Modes |
-                            High Ground Clearance
+                            The world’s best-selling Plug-in Hybrid SUV, now in
+                            the Philippines.
                         </p>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱1,389,000
+                            From ₱2,998,000
                         </p>
                         <a
                             href="/contact-us"
@@ -218,27 +184,25 @@ export default function Destinator() {
 
                 {/* THE DRIVE */}
                 <FeatureSection
-                    index="01"
-                    eyebrow="The Drive"
-                    heading="Excitement meets Confidence"
-                    copy="Transform your journey into an experience that befit the destination."
-                    ctaLabel="Explore the Drive"
-                    ctaHref="/vehicles/destinator/drive"
-                    image={`${IMG_BASE}/destinator1.webp`}
-                    imageAlt="Mitsubishi Destinator driving"
+                    index=""
+                    eyebrow="THE DRIVE"
+                    heading="The compact sedan you’ve been waiting for"
+                    copy="This is the world’s first Plug-in Hybrid EV SUV. Motors on both front and rear axles and an efficiently powerful gasoline engine work in harmony to optimise performance. Game-changing technologies make the Outlander PHEV highly responsive and astonishingly quiet."
+                    ctaHref="/vehicles/l300/drive"
+                    image={`${IMG_BASE}/l3001.jpg`}
+                    imageAlt="L300 The Drive"
                     imagePosition="right"
                 />
 
                 {/* EXTERIOR */}
                 <FeatureSection
                     index="02"
-                    eyebrow="Destinator Exterior"
-                    heading="Designed for More"
-                    copy="Compliment any breathtaking scenery with the Destinator’s sleek and futuristic design."
-                    ctaLabel="Explore Exterior"
-                    ctaHref="/vehicles/destinator/exterior"
-                    image={`${IMG_BASE}/destinator2.webp`}
-                    imageAlt="Mitsubishi Destinator exterior front view"
+                    eyebrow="L300 Exterior"
+                    heading="Small and compact outside"
+                    copy="This utility vehicle comes in at just 4440 mm long, so it’s ideal where parking space is a problem. The increased cab height gives you more visibility and a commanding view of the road ahead."
+                    ctaHref="/vehicles/l300/exterior"
+                    image={`${IMG_BASE}/l3002.jpg`}
+                    imageAlt="L300 exterior front view"
                     objectPosition="object-right"
                     imagePosition="left"
                 />
@@ -246,13 +210,12 @@ export default function Destinator() {
                 {/* INTERIOR */}
                 <FeatureSection
                     index="03"
-                    eyebrow="Destinator Interior"
-                    heading="Delight in More Comfort"
-                    copy="Make every drive feel like a vacation with elevated comfort and intuitive interior features."
-                    ctaLabel="Explore Interior"
-                    ctaHref="/vehicles/destinator/interior"
-                    image={`${IMG_BASE}/destinator3.webp`}
-                    imageAlt="Mitsubishi Destinator interior cabin"
+                    eyebrow="L300 Interior"
+                    heading="Comfortable cab and a huge loadspace"
+                    copy="Climb inside the cab and you won’t be disappointed. Dual air conditioning keeps you cool on those long journeys and the adaptable cargo area can handle a massive 1215Kg payload."
+                    ctaHref="/vehicles/l300/interior"
+                    image={`${IMG_BASE}/l3003.jpg`}
+                    imageAlt="L300 interior cabin"
                     objectPosition="object-right"
                     imagePosition="right"
                 />
@@ -260,20 +223,19 @@ export default function Destinator() {
                 {/* SAFETY */}
                 <FeatureSection
                     index="04"
-                    eyebrow="Destinator Safety"
-                    heading="More Confidence"
-                    copy="Arrive safely and securely to every destination with advanced safety features with Mitsubishi Motors Safety Sensing (MMSS)."
-                    ctaLabel="Explore Safety"
-                    ctaHref="/vehicles/destinator/safety"
-                    image={`${IMG_BASE}/destinator4.webp`}
-                    imageAlt="Mitsubishi Destinator safety features"
+                    eyebrow="L300 Safety"
+                    heading="A rugged chassis to help you make that delivery"
+                    copy="At Mitsubishi Motors, driver and passenger safety is always of paramount importance. So we’ve given the L300 a stronger, safer chassis."
+                    ctaHref="/vehicles/l300/safety"
+                    image={`${IMG_BASE}/l3004.jpg`}
+                    imageAlt="Mitsubishi Montero Sport safety features"
                     imagePosition="left"
                     theme="dark"
                 />
 
                 <VariantSelector
-                    variants={destinatorVariants}
-                    brochureHref="/brochures/destinator-brochure.pdf"
+                    variants={outlanderVariants}
+                    brochureHref="/brochures/files/l300.pdf"
                 />
 
                 <Footer />

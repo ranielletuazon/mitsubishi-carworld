@@ -56,7 +56,7 @@ export default function Home() {
 
                         {/* CTA Button */}
                         <a
-                            href="/contact"
+                            href="/contact-us"
                             className="group relative overflow-hidden border-2 border-white px-8 sm:px-10 py-3.5 sm:py-4 text-xs font-bold tracking-[0.2em] uppercase text-white transition-colors duration-300 hover:text-black inline-flex items-center gap-3 shrink-0"
                         >
                             <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />

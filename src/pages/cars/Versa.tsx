@@ -235,7 +235,6 @@ export default function Versa() {
                     eyebrow="Versa Exterior"
                     heading="Accelerate Success"
                     copy="From moving people to accelerating success – move your business forward with every passenger you move. "
-                    ctaLabel="Explore Exterior"
                     ctaHref="/vehicles/versa-van/exterior"
                     image={`${IMG_BASE}/versa2.webp`}
                     imageAlt="Mitsubishi Versa exterior front view"
@@ -249,7 +248,6 @@ export default function Versa() {
                     eyebrow="Versa Interior"
                     heading="Easier In & Out"
                     copy="A wider sliding door makes boarding and exiting faster, perfect for frequent pick-up and drop-off routes. "
-                    ctaLabel="Explore Interior"
                     ctaHref="/vehicles/versa-van/interior"
                     image={`${IMG_BASE}/versa3.webp`}
                     imageAlt="Mitsubishi Destinator interior cabin"
@@ -263,7 +261,6 @@ export default function Versa() {
                     eyebrow="Versa Safety"
                     heading="Comfort, Practicality & Safety"
                     copy="Seating 15 is as cozy and comfy as ever with Versa Van’s roomy design. Each row also gets its own aircon vent to make trips relaxed and comfortable all the way. The Versa Van comes equipped with driver and front passenger SRS airbags so you can have confidence with every drive."
-                    ctaLabel="Explore Safety"
                     ctaHref="/vehicles/versa-van/safety"
                     image={`${IMG_BASE}/versa4.webp`}
                     imageAlt="Mitsubishi Destinator safety features"

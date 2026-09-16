@@ -127,7 +127,7 @@ function FeatureSection({
 const xpanderVariants: Variant[] = [
     {
         name: "GLX MT",
-        price: 1068000,
+        price: 1099000,
         image: `${IMG_BASE}/variants/xpanderglxmt.png`,
         imageAlt: "Mitsubishi Xpander GLX MT",
         specs: [
@@ -140,7 +140,7 @@ const xpanderVariants: Variant[] = [
     },
     {
         name: "GLX A/T",
-        price: 1128000,
+        price: 1159000,
         image: `${IMG_BASE}/variants/xpanderglxat.png`,
         imageAlt: "Mitsubishi Xpander GLX AT",
         specs: [
@@ -152,7 +152,7 @@ const xpanderVariants: Variant[] = [
     },
     {
         name: "GLS A/T",
-        price: 1198000,
+        price: 1259000,
         image: `${IMG_BASE}/variants/xpanderglsat.png`,
         imageAlt: "Mitsubishi Xpander GLS AT",
         specs: [
@@ -165,7 +165,7 @@ const xpanderVariants: Variant[] = [
     },
     {
         name: "Cross A/T",
-        price: 1328000,
+        price: 1346000,
         image: `${IMG_BASE}/variants/xpandercross.png`,
         imageAlt: "Mitsubishi Xpander Cross AT",
         specs: [
@@ -227,7 +227,7 @@ export default function Xpander() {
                             The best-selling MPV in the country just got better
                         </p>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱1,068,000
+                            From ₱1,099,000
                         </p>
                         <a
                             href="/contact-us"
@@ -295,7 +295,7 @@ export default function Xpander() {
 
                 <VariantSelector
                     variants={xpanderVariants}
-                    brochureHref="/brochures/xpander-brochure.pdf"
+                    brochureHref="/brochures/files/xpander.pdf"
                 />
 
                 <Footer />

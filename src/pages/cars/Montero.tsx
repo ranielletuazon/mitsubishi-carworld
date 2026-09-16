@@ -171,7 +171,7 @@ const monteroVariants: Variant[] = [
     },
     {
         name: "GLS 2WD AT",
-        price: 1828000,
+        price: 1927000,
         image: `${IMG_BASE}/variants/gt2wdat.png`,
         imageAlt: "Mitsubishi Montero Sport GT 2WD AT",
         specs: [
@@ -240,7 +240,7 @@ export default function Montero() {
                             Power, presence, and premium comfort in every drive
                         </p>
                         <p className="text-lg sm:text-xl font-bold text-white mb-6">
-                            From ₱1,568,000
+                            From ₱1,928,000
                         </p>
                         <a
                             href="/contact-us"
