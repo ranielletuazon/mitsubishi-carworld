@@ -1,10 +1,17 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 export default function About() {
     return (
         <main className="w-full max-w-full bg-[#0B0B0C]">
             <Header />
+
+            <SEO
+                title="About Us"
+                description="Learn more about the profile of Mitusbishi Carworld"
+                url="/about-us"
+            />
 
             {/* Hero */}
             <section className="relative w-full overflow-hidden px-4 py-20 sm:py-28 mb-12">

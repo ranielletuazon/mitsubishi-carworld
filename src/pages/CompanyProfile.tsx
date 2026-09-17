@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 // Swap in your actual imports once saved to src/assets/
 import dealershipBuilding from "../assets/images/dealerBuilding.jpg";
@@ -10,6 +11,11 @@ export default function CompanyProfile() {
     return (
         <>
             <Header />
+            <SEO
+                title="Company Profile"
+                description="Flagship company of the Laus Group of Companies, serving the Philippines since 1978."
+                url="/company-profile"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="relative w-full h-[52vh] sm:h-[60vh] min-h-[380px] overflow-hidden">

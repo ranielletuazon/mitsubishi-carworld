@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 export default function Contact() {
     const [iframeLoaded, setIframeLoaded] = useState(false);
@@ -8,6 +9,11 @@ export default function Contact() {
     return (
         <>
             <Header />
+            <SEO
+                title="Contact Us"
+                description="Questions, quotes, or feedback — we're here to help"
+                url="/contact-us"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="w-full bg-black py-12 sm:py-16 px-4 text-center">

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NotFound from "./NotFound"; // adjust this path to wherever NotFound.tsx actually lives
 import { getNewsBySlug, getImageSrc, type NewsPost } from "../assets/data/news";
+import SEO from "./components/SEO";
 
 interface DealerContact {
     location: string;
@@ -138,6 +139,23 @@ export default function NewsView() {
 
     return (
         <>
+            {post && (
+                <SEO
+                    title={post.title}
+                    description={
+                        post.description.length > 160
+                            ? `${post.description.slice(0, 157)}...`
+                            : post.description
+                    }
+                    image={
+                        typeof window !== "undefined"
+                            ? `${window.location.origin}${getImageSrc(post)}`
+                            : getImageSrc(post)
+                    }
+                    url={`/news/${post.slug}`}
+                    type="article"
+                />
+            )}
             {/* Scroll progress — thin, only meaningful once the article is loaded */}
             <div className="fixed top-0 left-0 right-0 z-50 h-[3px] bg-gray-100">
                 <div

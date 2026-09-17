@@ -53,187 +53,210 @@ import PriceList from "./pages/PriceList";
 import DataPrivacy from "./pages/DataPrivacy";
 import Brochure from "./pages/Brochure";
 
+// Helmet Provider
+import { HelmetProvider } from "react-helmet-async";
+
 function App() {
     return (
         <>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />}></Route>
-                    {/* Vehicles Catalog */}
-                    <Route path="/vehicles" element={<Vehicles />}></Route>
+            <HelmetProvider>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Home />}></Route>
+                        {/* Vehicles Catalog */}
+                        <Route path="/vehicles" element={<Vehicles />}></Route>
 
-                    {/* Mirage G4 */}
-                    <Route path="/vehicles/mirage-g4" element={<MirageG4 />} />
-                    <Route
-                        path="/vehicles/mirage-g4/exterior"
-                        element={<MirageG4Exterior />}
-                    />
-                    <Route
-                        path="/vehicles/mirage-g4/interior"
-                        element={<MirageG4Interior />}
-                    />
-                    <Route
-                        path="/vehicles/mirage-g4/drive"
-                        element={<MirageG4Drive />}
-                    />
-                    <Route
-                        path="/vehicles/mirage-g4/safety"
-                        element={<MirageG4Safety />}
-                    />
+                        {/* Mirage G4 */}
+                        <Route
+                            path="/vehicles/mirage-g4"
+                            element={<MirageG4 />}
+                        />
+                        <Route
+                            path="/vehicles/mirage-g4/exterior"
+                            element={<MirageG4Exterior />}
+                        />
+                        <Route
+                            path="/vehicles/mirage-g4/interior"
+                            element={<MirageG4Interior />}
+                        />
+                        <Route
+                            path="/vehicles/mirage-g4/drive"
+                            element={<MirageG4Drive />}
+                        />
+                        <Route
+                            path="/vehicles/mirage-g4/safety"
+                            element={<MirageG4Safety />}
+                        />
 
-                    {/* Xpander */}
-                    <Route
-                        path="/vehicles/xpander"
-                        element={<Xpander />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xpander/drive"
-                        element={<XpanderDrive />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xpander/exterior"
-                        element={<XpanderExterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xpander/interior"
-                        element={<XpanderInterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xpander/safety"
-                        element={<XpanderSafety />}
-                    ></Route>
+                        {/* Xpander */}
+                        <Route
+                            path="/vehicles/xpander"
+                            element={<Xpander />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xpander/drive"
+                            element={<XpanderDrive />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xpander/exterior"
+                            element={<XpanderExterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xpander/interior"
+                            element={<XpanderInterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xpander/safety"
+                            element={<XpanderSafety />}
+                        ></Route>
 
-                    {/* Montero Sporrt */}
-                    <Route
-                        path="/vehicles/montero-sport"
-                        element={<Montero />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/montero-sport/drive"
-                        element={<MonteroDrive />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/montero-sport/exterior"
-                        element={<MonteroExterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/montero-sport/interior"
-                        element={<MonteroInterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/montero-sport/safety"
-                        element={<MonteroSafety />}
-                    ></Route>
+                        {/* Montero Sporrt */}
+                        <Route
+                            path="/vehicles/montero-sport"
+                            element={<Montero />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/montero-sport/drive"
+                            element={<MonteroDrive />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/montero-sport/exterior"
+                            element={<MonteroExterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/montero-sport/interior"
+                            element={<MonteroInterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/montero-sport/safety"
+                            element={<MonteroSafety />}
+                        ></Route>
 
-                    {/* Triton */}
-                    <Route path="/vehicles/triton" element={<Triton />}></Route>
-                    <Route
-                        path="/vehicles/triton/drive"
-                        element={<TritonDrive />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/triton/exterior"
-                        element={<TritonExterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/triton/interior"
-                        element={<TritonInterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/triton/safety"
-                        element={<TritonSafety />}
-                    ></Route>
+                        {/* Triton */}
+                        <Route
+                            path="/vehicles/triton"
+                            element={<Triton />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/triton/drive"
+                            element={<TritonDrive />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/triton/exterior"
+                            element={<TritonExterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/triton/interior"
+                            element={<TritonInterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/triton/safety"
+                            element={<TritonSafety />}
+                        ></Route>
 
-                    {/* Destinator */}
-                    <Route
-                        path="/vehicles/destinator"
-                        element={<Destinator />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/destinator/drive"
-                        element={<DestinatorDrive />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/destinator/exterior"
-                        element={<DestinatorExterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/destinator/interior"
-                        element={<DestinatorInterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/destinator/safety"
-                        element={<DestinatorSafety />}
-                    ></Route>
+                        {/* Destinator */}
+                        <Route
+                            path="/vehicles/destinator"
+                            element={<Destinator />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/destinator/drive"
+                            element={<DestinatorDrive />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/destinator/exterior"
+                            element={<DestinatorExterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/destinator/interior"
+                            element={<DestinatorInterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/destinator/safety"
+                            element={<DestinatorSafety />}
+                        ></Route>
 
-                    {/* Xforce */}
-                    <Route path="/vehicles/xforce" element={<Xforce />}></Route>
-                    <Route
-                        path="/vehicles/xforce/drive"
-                        element={<XforceDrive />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xforce/exterior"
-                        element={<XforceExterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xforce/interior"
-                        element={<XforceInterior />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/xforce/safety"
-                        element={<XforceSafety />}
-                    ></Route>
+                        {/* Xforce */}
+                        <Route
+                            path="/vehicles/xforce"
+                            element={<Xforce />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xforce/drive"
+                            element={<XforceDrive />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xforce/exterior"
+                            element={<XforceExterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xforce/interior"
+                            element={<XforceInterior />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/xforce/safety"
+                            element={<XforceSafety />}
+                        ></Route>
 
-                    {/* L300 */}
-                    <Route path="/vehicles/l300" element={<L300 />}></Route>
+                        {/* L300 */}
+                        <Route path="/vehicles/l300" element={<L300 />}></Route>
 
-                    {/* Versa Van */}
-                    <Route
-                        path="/vehicles/versa-van"
-                        element={<Versa />}
-                    ></Route>
-                    <Route
-                        path="/vehicles/versa-van/drive"
-                        element={<VersaDrive />}
-                    ></Route>
+                        {/* Versa Van */}
+                        <Route
+                            path="/vehicles/versa-van"
+                            element={<Versa />}
+                        ></Route>
+                        <Route
+                            path="/vehicles/versa-van/drive"
+                            element={<VersaDrive />}
+                        ></Route>
 
-                    {/* Strada */}
-                    <Route path="/vehicles/strada" element={<Strada />}></Route>
+                        {/* Strada */}
+                        <Route
+                            path="/vehicles/strada"
+                            element={<Strada />}
+                        ></Route>
 
-                    {/* Outlander */}
-                    <Route
-                        path="/vehicles/outlander"
-                        element={<Outlander />}
-                    ></Route>
+                        {/* Outlander */}
+                        <Route
+                            path="/vehicles/outlander"
+                            element={<Outlander />}
+                        ></Route>
 
-                    <Route path="/about-us" element={<About />}></Route>
-                    <Route path="/services" element={<Service />}></Route>
-                    <Route
-                        path="/find-a-dealer"
-                        element={<FindADealer />}
-                    ></Route>
-                    <Route
-                        path="/company-profile"
-                        element={<CompanyProfile />}
-                    ></Route>
-                    <Route path="/news" element={<News />}></Route>
-                    <Route path="/news-post" element={<NewsPoster />}></Route>
-                    <Route path="/contact-us" element={<Contact />}></Route>
-                    <Route
-                        path="/service-promos"
-                        element={<ServicePromos />}
-                    ></Route>
-                    <Route path="/news/:slug" element={<NewsView />} />
-                    <Route path="/price-list" element={<PriceList />}></Route>
-                    <Route
-                        path="/data-privacy-notice"
-                        element={<DataPrivacy />}
-                    ></Route>
-                    <Route path="/brochures" element={<Brochure />}></Route>
-                    <Route path="*" element={<NotFound />}></Route>
-                </Routes>
-            </BrowserRouter>
+                        <Route path="/about-us" element={<About />}></Route>
+                        <Route path="/services" element={<Service />}></Route>
+                        <Route
+                            path="/find-a-dealer"
+                            element={<FindADealer />}
+                        ></Route>
+                        <Route
+                            path="/company-profile"
+                            element={<CompanyProfile />}
+                        ></Route>
+                        <Route path="/news" element={<News />}></Route>
+                        <Route
+                            path="/news-post"
+                            element={<NewsPoster />}
+                        ></Route>
+                        <Route path="/contact-us" element={<Contact />}></Route>
+                        <Route
+                            path="/service-promos"
+                            element={<ServicePromos />}
+                        ></Route>
+                        <Route path="/news/:slug" element={<NewsView />} />
+                        <Route
+                            path="/price-list"
+                            element={<PriceList />}
+                        ></Route>
+                        <Route
+                            path="/data-privacy-notice"
+                            element={<DataPrivacy />}
+                        ></Route>
+                        <Route path="/brochures" element={<Brochure />}></Route>
+                        <Route path="*" element={<NotFound />}></Route>
+                    </Routes>
+                </BrowserRouter>
+            </HelmetProvider>
         </>
     );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 interface NoticeSection {
     id: string;
@@ -496,6 +497,11 @@ export default function DataPrivacyNotice() {
     return (
         <>
             <Header />
+            <SEO
+                title="Data Privacy Notice"
+                description="How Carworld, Inc. collects, uses, and protects your personal data in accordance with the Data Privacy Act of 2012."
+                url="/data-privacy-notice"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="w-full bg-black py-12 sm:py-16 px-4 text-center">

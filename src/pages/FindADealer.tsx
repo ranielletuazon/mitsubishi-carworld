@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 interface Dealer {
     name: string;
@@ -121,6 +122,11 @@ export default function FindADealer() {
     return (
         <>
             <Header />
+            <SEO
+                title="Mitsubishi Carworld Dealers"
+                description="Locate the nearest Mitsubishi Carworld dealerships"
+                url="/find-a-dealer"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="w-full bg-black py-12 sm:py-16 px-4 flex flex-col items-center justify-center">
