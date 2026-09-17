@@ -1,35 +1,52 @@
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 interface Promo {
     title: string;
-    subtitle: string;
-    image?: string;
-    validUntil: string;
-    href: string;
+    image: string;
 }
 
 const promos: Promo[] = [
     {
         title: "Free Oil Filter",
-        subtitle: "Save as much as ₱1,400 on select maintenance packages.",
-        validUntil: "Until August 15, 2026",
-        href: "/service/promos/free-oil-filter",
         image: "/images/service/freeoilfilter.jpg",
     },
     {
         title: "Anniversary Treats",
-        subtitle: "Book an appointment and win instant prizes.",
-        validUntil: "July 15 – August 15, 2026",
-        href: "/service/promos/anniversary-treats",
         image: "/images/service/annivtreats.jpg",
     },
 ];
 
 export default function ServicePromos() {
+    const [selectedPromo, setSelectedPromo] = useState<Promo | null>(null);
+
+    // Close on Escape key
+    useEffect(() => {
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setSelectedPromo(null);
+        };
+        window.addEventListener("keydown", onKeyDown);
+        return () => window.removeEventListener("keydown", onKeyDown);
+    }, []);
+
+    // Prevent background scroll while modal is open
+    useEffect(() => {
+        document.body.style.overflow = selectedPromo ? "hidden" : "";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [selectedPromo]);
+
     return (
         <>
             <Header />
+            <SEO
+                title="Service Promos"
+                description="Current maintenance deals and seasonal offers"
+                url="/service-promos"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="w-full bg-black py-12 sm:py-16 px-4 text-center">
@@ -48,54 +65,28 @@ export default function ServicePromos() {
                     </p>
                 </section>
 
-                {/* Promo grid */}
+                {/* Promo gallery */}
                 <section className="container mx-auto px-4 lg:px-6 py-14">
                     {promos.length === 0 ? (
                         <p className="text-center text-gray-400 text-sm py-16">
                             No active promos at the moment. Check back soon.
                         </p>
                     ) : (
-                        <div className="border-t border-l border-gray-200">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                                {promos.map((promo) => (
-                                    <a
-                                        key={promo.href}
-                                        href={promo.href}
-                                        className="group flex flex-col bg-white hover:bg-gray-50 cursor-pointer transition-colors duration-200 border-r border-b border-gray-200"
-                                    >
-                                        <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
-                                            {promo.image ? (
-                                                <img
-                                                    src={promo.image}
-                                                    alt={promo.title}
-                                                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black/60"
-                                                />
-                                            ) : (
-                                                <div className="w-full h-full flex items-center justify-center text-[11px] uppercase tracking-widest text-gray-400">
-                                                    Promo Image
-                                                </div>
-                                            )}
-                                        </div>
-                                        <div className="flex flex-col gap-2 px-6 py-5 flex-1 border-t-2 border-transparent group-hover:border-red-600 transition-all duration-200">
-                                            <span className="text-[11px] font-medium tracking-[1.5px] uppercase text-gray-400">
-                                                {promo.validUntil}
-                                            </span>
-                                            <h3 className="text-base font-bold text-gray-900 leading-snug uppercase">
-                                                {promo.title}
-                                            </h3>
-                                            <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
-                                                {promo.subtitle}
-                                            </p>
-                                            <div className="mt-auto pt-3 flex items-center gap-1.5 text-[11px] font-bold tracking-[1.5px] uppercase text-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                                <span>View details</span>
-                                                <span className="transition-transform duration-200 group-hover:translate-x-1">
-                                                    →
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                ))}
-                            </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                            {promos.map((promo) => (
+                                <button
+                                    key={promo.title}
+                                    onClick={() => setSelectedPromo(promo)}
+                                    className="group border border-gray-200 overflow-hidden cursor-pointer text-left hover:border-red-600/40 transition-colors duration-200"
+                                >
+                                    <img
+                                        src={promo.image}
+                                        alt={promo.title}
+                                        className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                                        loading="lazy"
+                                    />
+                                </button>
+                            ))}
                         </div>
                     )}
                 </section>
@@ -128,6 +119,28 @@ export default function ServicePromos() {
                 </section>
             </main>
             <Footer />
+
+            {/* Image lightbox */}
+            {selectedPromo && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-8"
+                    onClick={() => setSelectedPromo(null)}
+                >
+                    <button
+                        onClick={() => setSelectedPromo(null)}
+                        aria-label="Close"
+                        className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white text-3xl leading-none w-10 h-10 flex items-center justify-center hover:text-red-500 transition-colors duration-200 cursor-pointer"
+                    >
+                        ×
+                    </button>
+                    <img
+                        src={selectedPromo.image}
+                        alt={selectedPromo.title}
+                        onClick={(e) => e.stopPropagation()}
+                        className="max-w-full max-h-full object-contain"
+                    />
+                </div>
+            )}
         </>
     );
 }

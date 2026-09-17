@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 interface Brochure {
     name: string;
@@ -57,13 +58,19 @@ export default function Brochures() {
     return (
         <>
             <Header />
+            <SEO
+                title="Brochures"
+                description="View our detailed specifications and features for every
+                        model in the Mitsubishi lineup."
+                url="/about-us"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="w-full bg-black py-12 sm:py-16 px-4 text-center">
                     <div className="flex items-center justify-center gap-2 mb-3">
                         <span className="w-5 h-0.5 bg-red-600" />
                         <span className="text-[11px] font-bold tracking-[3px] uppercase text-red-500">
-                            Downloads
+                            Our
                         </span>
                         <span className="w-5 h-0.5 bg-red-600" />
                     </div>
@@ -71,7 +78,7 @@ export default function Brochures() {
                         Brochures
                     </h1>
                     <p className="text-sm text-white/60 max-w-lg mx-auto">
-                        Download detailed specifications and features for every
+                        View our detailed specifications and features for every
                         model in the Mitsubishi lineup.
                     </p>
                 </section>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import heroVehicle from "../assets/images/hero_vehicle.webp";
+import SEO from "./components/SEO";
 
 interface Vehicle {
     id: number;
@@ -84,7 +85,11 @@ export default function Vehicles() {
     return (
         <main className="w-full max-w-full bg-[#0B0B0C]">
             <Header />
-
+            <SEO
+                title="Vehicles"
+                description="Explore the full Mitsubishi lineup at Carworld — Mirage, Xpander, Triton, Montero Sport, Strada, and more."
+                url="/vehicles"
+            />
             {/* Hero — showroom floor entrance */}
             {/* Hero — showroom floor entrance */}
             <section className="relative w-full overflow-hidden px-4 py-20 sm:py-28">

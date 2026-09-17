@@ -6,6 +6,7 @@ import {
     getImageSrc,
     type NewsPost,
 } from "../assets/data/news";
+import SEO from "./components/SEO";
 
 const PAGE_SIZE = 8;
 
@@ -28,6 +29,11 @@ export default function News() {
     return (
         <>
             <Header />
+            <SEO
+                title="Latest News & Offers"
+                description="Promotions, launches, and announcements from Carworld"
+                url="/news"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Hero */}
                 <section className="w-full bg-black py-14 sm:py-16 px-4 text-center">

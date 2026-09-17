@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 interface PriceEntry {
     year: string;
@@ -227,6 +228,12 @@ export default function PriceList() {
     return (
         <>
             <Header />
+            <SEO
+                title="Price List"
+                description="Suggested retail prices for the current Mitsubishi
+                        lineup."
+                url="/price-list"
+            />
             <main className="w-full max-w-full bg-white">
                 {/* Section title */}
                 <section className="w-full bg-black py-10 sm:py-14 text-center px-4">

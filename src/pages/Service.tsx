@@ -1,10 +1,16 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
 
 export default function Service() {
     return (
         <main className="w-full max-w-full bg-[#0B0B0C]">
             <Header />
+            <SEO
+                title="Services and Promos"
+                description="Genuine parts, certified technicians, and honest pricing"
+                url="/services"
+            />
 
             {/* Hero */}
             <section className="relative w-full overflow-hidden px-4 py-20 sm:py-28 mb-12">

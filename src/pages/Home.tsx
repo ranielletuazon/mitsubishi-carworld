@@ -3,11 +3,17 @@ import Footer from "./components/Footer";
 import HeroSlideshow from "./components/HeroSlideshow";
 import NewsSection from "./components/NewsSection";
 import VehicleShowcase from "./components/VehicleShowcase";
+import SEO from "./components/SEO";
 
 export default function Home() {
     return (
         <>
             <Header />
+            <SEO
+                title="The Home of Mitsubishi in the Philippines"
+                description="Mitsubishi Carworld is the trusted home of Mitsubishi vehicles in the Philippines. Explore the Mirage, Xpander, Triton, Montero Sport, and more. Find your nearest dealer today."
+                url="/"
+            />
             <main className="w-full max-w-full">
                 <HeroSlideshow />
 
