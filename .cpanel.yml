@@ -2,6 +2,7 @@
 deployment:
     tasks:
         - export DEPLOYPATH=/home/ajpetrte/public_html/mitsubishicarworld.com.ph/
+        - export REPOPATH=/home/ajpetrte/repositories/mitsubishi-carworld
         - /bin/mkdir -p $DEPLOYPATH
         - /bin/rm -rf $DEPLOYPATH*
         - /bin/cp -R $REPOPATH/dist/. $DEPLOYPATH
