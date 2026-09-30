@@ -1,0 +1,13 @@
+<?php
+define("DB_SERVER", "localhost");
+define("DB_USERNAME", "ranielletuazon");
+define("DB_PASSWORD", "oersStigF6$$");
+define("DB_DATABASE", "db_carworld_react");
+
+$db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+if (!$db) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+mysqli_set_charset($db, "utf8mb4");

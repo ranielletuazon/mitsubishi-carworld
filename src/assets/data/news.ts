@@ -10,8 +10,9 @@ export interface NewsPost {
     created_date: string;
 }
 
-const NEWS_IMAGE_BASE_LIVE = "http://localhost/carworld_api/news/images/";
-const API_URL = "http://localhost/carworld_api/get_news.php";
+const NEWS_IMAGE_BASE_LIVE =
+    "https://mitsubishicarworld.com.ph/carworld_api/news/images/";
+const API_URL = "https://mitsubishicarworld.com.ph/carworld_api/get_news.php";
 
 // Bundled fallback images for the original seed posts only.
 // New posts uploaded via NewsPoster.tsx will never match this glob,

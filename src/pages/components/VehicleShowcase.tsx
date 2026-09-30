@@ -10,7 +10,8 @@ interface Vehicle {
     slug: string;
 }
 
-const API_URL = "http://localhost/carworld_api/get_vehicles.php";
+const API_URL =
+    "https://mitsubishicarworld.com.ph/carworld_api/get_vehicles.php";
 // TODO before deploy: move to an env var (import.meta.env.VITE_API_URL)
 
 const featuredSlugs = ["mirage-g4", "xpander", "montero-sport", "l300"];
