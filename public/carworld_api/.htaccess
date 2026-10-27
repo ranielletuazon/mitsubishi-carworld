@@ -1,3 +1,12 @@
+# Keep WordPress/React rewrite rules from touching the API folder
 <IfModule mod_rewrite.c>
-RewriteEngine Off
+    RewriteEngine Off
 </IfModule>
+
+# No folder listings
+Options -Indexes
+
+# Block direct browser access to the DB config file (PHP can still include it)
+<Files "mysql_connect.php">
+    Require all denied
+</Files>
