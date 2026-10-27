@@ -18,14 +18,10 @@ const dealers: Dealer[] = [
     {
         name: "Mitsubishi Carworld Pampanga",
         address: "Jose Abad Santos Avenue, City of San Fernando, Pampanga",
-        sales: ["+63949-994-2737", "+63918-854-2233"],
+        sales: ["+63998-841-5530"],
         service: ["+63918-854-2176"],
-        parts: ["+63918-854-2179", "+63918-854-2172"],
-        serviceAppointment: [
-            "+63939-984-2153",
-            "+63919-008-9872",
-            "+63918-854-2916",
-        ],
+        parts: ["+63918-854-2172"],
+        serviceAppointment: ["+63918-854-2176"],
         hours: [
             { days: "Monday – Friday", time: "8:00 AM – 6:00 PM" },
             { days: "Saturday", time: "8:00 AM – 6:00 PM" },

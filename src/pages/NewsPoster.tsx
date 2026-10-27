@@ -57,7 +57,7 @@ export default function NewsPoster() {
 
         try {
             const res = await fetch(
-                `http://localhost/carworld_api/post_news.php`,
+                `https://mitsubishicarworld.com.ph/carworld_api/post_news.php`,
                 {
                     method: "POST",
                     body: formData,
